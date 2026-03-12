@@ -1,0 +1,19 @@
+.detail_layout {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.save_button_layout {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.save_button {
+  background-color: blue;
+  color: white;
+  border-radius: 4px;
+  padding: 15px;
+  cursor: pointer;
+}

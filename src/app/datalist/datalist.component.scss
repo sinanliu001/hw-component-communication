@@ -1,0 +1,32 @@
+.data_list_Layout {
+  display: flex;
+  height: 100vh;
+
+  > * {
+    flex: 1;
+  }
+}
+
+.data_list_container {
+  border-right: 2px solid lightgray;
+}
+
+.data_list_header {
+  border-bottom: 2px solid lightgray;
+}
+
+.item_container {
+  border-left: 4px solid;
+  cursor: pointer;
+  padding: 1rem;
+  border-bottom: 2px solid lightgray;
+}
+
+.item_container:last-child {
+  border-bottom: none;
+}
+
+.selected_item {
+  border-left-width: 8px;
+  background-color: lightgray;
+}

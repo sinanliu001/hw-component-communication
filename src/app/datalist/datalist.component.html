@@ -1,0 +1,27 @@
+<div [ngClass]="'data_list_Layout'">
+  <div [ngClass]="'data_list_container'">
+    <div [ngClass]="'data_list_header'">
+      <h1>Data List</h1>
+    </div>
+    <div
+      *ngFor="let item of data"
+      (click)="onItemClick(item)"
+      [ngClass]="
+        `item_container
+        ${selectedData && selectedData.name == item.name && 'selected_item'}`
+      "
+      [ngStyle]="{
+        'border-left-color': item.color,
+      }"
+    >
+      <h2 [ngStyle]="{ color: item.name == saveData ? item.color : 'black' }">
+        {{ item.name }}
+      </h2>
+      <p>{{ item.description | truncation }}</p>
+    </div>
+  </div>
+  <app-details
+    [detailData]="selectedData"
+    (saveButton)="onTitleUpdate($event)"
+  ></app-details>
+</div>

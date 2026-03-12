@@ -1,0 +1,7 @@
+<div [ngClass]="'detail_layout'" *ngIf="detailData">
+  <h1>{{ detailData.name }}</h1>
+  <p>{{ detailData.description }}</p>
+  <div [ngClass]="'save_button_layout'">
+    <button [ngClass]="'save_button'" (click)="onSave()">Save</button>
+  </div>
+</div>
